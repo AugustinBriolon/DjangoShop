@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='../../static/css/style.css'>
+  <title>TEST</title>
+</head>
+
+<body>
+
+  <header>
+
+    <h1 class="title">Nike Shop</h1>
+    <a href="/create" class="btn btnUpdate btnCreate">Create</a>
+
+  </header>
+
+  <section class="containerIndex">
+
+
+    {% for product in products %}
+    <div class="main">
+      <a href="/{{ product.id }}" class="linkProduct">
+
+        <img src="{{ product.image }}" alt="image" class="imgProduct">
+        <h2>{{ product.name }}</h2>
+        <strong>{{ product.price }} €</strong>
+
+      </a>
+    </div>
+    {% endfor %}
+
+  </section>
+
+</body>
+
+</html>

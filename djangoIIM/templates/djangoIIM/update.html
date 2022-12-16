@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <!-- STYLE -->
+  <link rel='stylesheet' href='../../static/css/style.css'>
+  <title>UPDATE</title>
+</head>
+
+<body>
+
+  <div class="main create">
+    <h1>Update Shoes</h1>
+    <!-- Create a Form -->
+    <form method="POST">
+      <!-- Security token by Django -->
+      {% csrf_token %}
+
+      <!-- form as paragraph -->
+      {{ form.as_p }}
+
+      <input type="submit" value="Update">
+    </form>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='../../static/css/style.css'>
+  <title>TEST</title>
+</head>
+
+<body>
+
+  <header>
+
+    <h1 class="title">{{ product.name }}</h1>
+    <a href="/" class="btn btnUpdate btnCreate">Home</a>
+
+  </header>
+
+  <section class="productContainer">
+
+    <div class="main linkProduct">
+
+        <img src="{{ product.image }}" alt="image" class="imgProduct">
+        <h2>{{ product.name }}</h2>
+        <strong>{{ product.price }} €</strong>
+
+        <div class="btnContainer">
+          <a href="/{{ product.id }}/update" class="btn btnUpdate">Update</a>
+          <a href="/{{ product.id }}/delete" class="btn btnDelete">Delete</a>
+        </div>
+
+    </div>
+
+  </section>
+
+</body>
+
+</html>

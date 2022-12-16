@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+  <!-- STYLE -->
+  <link rel='stylesheet' href='../../static/css/style.css'>
+  <title>DELETE</title>
+</head>
+
+<body>
+
+  <div class="main">
+    <!-- Create a Form -->
+    <form method="POST">
+      <!-- Security token by Django -->
+      {% csrf_token %}
+      Are you want to delete this item ?
+      <input type="submit" value="Yes" />
+      <a href="/">Cancel </a>
+    </form>
+  </div>
+
+</body>
+
+</html>
